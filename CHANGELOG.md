@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented in this file.
 
+## 0.0.4 - 2026-05-28
+
+- Updated manifest metadata to the canonical project location at `https://github.com/SteveSouthwell/diagnostics_mirror`.
+- Removed unused `@types/node` development dependency to reduce dependency footprint.
+- Confirmed `package-lock.json` is tracked for reproducible dependency resolution.
+
 ## 0.0.3 - 2026-05-28
 
 - Added debounce and change-detection logic to reduce unnecessary file writes.

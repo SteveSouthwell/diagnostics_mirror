@@ -35,6 +35,11 @@ Use VS Code Settings and search for `Diagnostics Mirror`.
 
 External AI coding agents can read these files to understand the latest compiler and linter issues without direct VS Code APIs.
 
+## Project Location
+
+- Repository: https://github.com/SteveSouthwell/diagnostics_mirror
+- Issues: https://github.com/SteveSouthwell/diagnostics_mirror/issues
+
 ## Privacy And Data Behavior
 
 - This extension writes local files only.
