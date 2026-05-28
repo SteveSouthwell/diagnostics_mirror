@@ -1,0 +1,72 @@
+{
+  "name": "diagnostics-mirror",
+  "displayName": "Diagnostics Mirror",
+  "description": "Mirrors VS Code Problems diagnostics into project files for external AI agents.",
+  "version": "0.0.3",
+  "license": "MIT",
+  "publisher": "sesouthwell",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/REPLACE_WITH_YOUR_ORG/diagnostics-mirror.git"
+  },
+  "bugs": {
+    "url": "https://github.com/REPLACE_WITH_YOUR_ORG/diagnostics-mirror/issues"
+  },
+  "homepage": "https://github.com/REPLACE_WITH_YOUR_ORG/diagnostics-mirror#readme",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "diagnosticsMirror.refreshNow",
+        "title": "Diagnostics Mirror: Refresh Now"
+      }
+    ],
+    "configuration": {
+      "title": "Diagnostics Mirror",
+      "properties": {
+        "diagnosticsMirror.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable writing diagnostics mirror files."
+        },
+        "diagnosticsMirror.outputFolder": {
+          "type": "string",
+          "default": ".ai/problems",
+          "description": "Relative folder inside each workspace root where diagnostics mirror files are written."
+        },
+        "diagnosticsMirror.allProblemsDebounceMs": {
+          "type": "number",
+          "default": 1000,
+          "minimum": 100,
+          "description": "Debounce window in milliseconds before writing all-problems.json after diagnostics events."
+        },
+        "diagnosticsMirror.mirrorCurrentFile": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to write current-file.json for the active editor file."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.2",
+    "@types/node": "^20.16.11",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.6.2"
+  }
+}
