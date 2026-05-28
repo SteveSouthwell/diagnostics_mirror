@@ -2,7 +2,7 @@
   "name": "diagnostics-mirror",
   "displayName": "Diagnostics Mirror",
   "description": "Mirrors VS Code Problems diagnostics into project files for external AI agents.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "publisher": "sesouthwell",
   "repository": {

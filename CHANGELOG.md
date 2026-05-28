@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented in this file.
 
+## 0.0.5 - 2026-05-28
+
+- Fixed an issue where `all-problems.json` could include files with empty `diagnostics` arrays after problems were cleared.
+- `all-problems.json` now includes only files that currently have one or more diagnostics.
+
 ## 0.0.4 - 2026-05-28
 
 - Updated manifest metadata to the canonical project location at `https://github.com/SteveSouthwell/diagnostics_mirror`.

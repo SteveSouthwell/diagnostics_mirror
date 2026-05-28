@@ -227,7 +227,9 @@ function buildPayload(
   let information = 0;
   let hints = 0;
 
-  const files: FileDiagnostics[] = diagnosticsByUri.map(([uri, diagnostics]) => {
+  const files: FileDiagnostics[] = diagnosticsByUri
+    .filter(([, diagnostics]) => diagnostics.length > 0)
+    .map(([uri, diagnostics]) => {
     const mapped = diagnostics.map((diagnostic) => {
       const severity = toSeverityLabel(diagnostic.severity);
       total += 1;

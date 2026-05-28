@@ -9,6 +9,7 @@ The files are updated automatically with these rules:
 
 - `.ai/problems/all-problems.json` updates when diagnostics change, is debounced, and is only rewritten when the diagnostics content actually changes.
 - `.ai/problems/current-file.json` updates when diagnostics change and when you switch the active editor.
+- Both output files include only files that currently have one or more diagnostics.
 
 In multi-root workspaces, each root folder gets its own mirror folder and files.
 
